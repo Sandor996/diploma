@@ -1,0 +1,123 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('./../../img/background_video_desktop_Moment.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.video_overlay {
+    position: absolute;
+    z-index: 2;
+    background-color: #182642;
+    mix-blend-mode: overlay;
+    width: 100%;
+    height: 100%;
+}
+
+.background_video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.login_btn {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 3;
+    text-align: center;
+    border: 1px solid white;
+    padding: .25rem;
+    transition: all linear 400ms;
+}
+
+.login_btn:hover {
+    background-color: #16181da4;
+
+}
+
+.scramble_text {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    animation: glitch 1000ms infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+            -0.025em 0.05em 0 rgba(0, 255, 0, 0.75),
+            0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+
+    15% {
+        text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+            0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+
+    20% {
+        text-shadow: 0 0 0 rgba(255, 0, 0, 0.75),
+            0 0 0 rgba(0, 255, 0, 0.75),
+            0 0 0 rgba(0, 0, 255, 0.75);
+    }
+
+    50% {
+        text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+            0.05em 0 0 rgba(0, 255, 0, 0.75),
+            0 -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+
+    70% {
+        text-shadow: 0 0 0 rgba(255, 0, 0, 0.75),
+            0 0 0 rgba(0, 255, 0, 0.75),
+            0 0 0 rgba(0, 0, 255, 0.75);
+    }
+
+    100% {
+        text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+            -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .container {
+        background-image: url(./../../img/background_video_mobile_Moment.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .video_overlay {
+        background-color: #182642a6;
+        mix-blend-mode: overlay;
+    }
+
+    .login_btn {
+        position: absolute;
+        bottom: 2%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        z-index: 3;
+        text-align: center;
+        padding: .25rem;
+    }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .login_btn {
+        bottom: 2%;
+        padding: .25rem;
+    }
+}

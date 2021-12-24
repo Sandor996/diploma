@@ -1,0 +1,132 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./../../img/chat_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.chat_container {
+    margin-top: 5%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.message_form {
+    margin-top: 2%;
+    width: 80%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.message_field {
+    resize: none;
+    width: 75%;
+    border-radius: 45px;
+    height: 4rem;
+    padding: 1.5rem .5rem;
+    font-size: 1rem;
+}
+
+.paper_plane {
+    background-image: url('./../../img/paper_plane_white.svg');
+    background-size: 4rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 130%;
+    position: relative;
+    transition: all linear .15s;
+}
+
+.paper_plane:hover {
+    background-image: url(./../../img/paper_plane_shadow.svg);
+    background-color: #00ffb4;
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .container {
+        background-position: right;
+    }
+
+    .chat_container {
+        margin-top: 5%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 65%;
+        width: 80%;
+        border: 1px solid black;
+        border-radius: 1rem;
+        padding: .5rem;
+        overflow-y: auto;
+    }
+
+    .message_form {
+        position: fixed;
+        bottom: 2%;
+        width: 100vw;
+    }
+
+    .paper_plane {
+
+        background-size: 2.67rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .message_field {
+        resize: none;
+        height: 3rem;
+        font-size: .75rem;
+        padding: .5rem .5rem;
+        box-sizing: border-box;
+    }
+}
+
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+
+    .chat_container {
+        margin: 0;
+        height: 45%;
+    }
+
+    .message_form {
+        position: fixed;
+        bottom: 2%;
+        width: 100vw;
+    }
+
+    .paper_plane {
+
+        background-size: 2.67rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .message_field {
+        resize: none;
+        height: 3rem;
+        font-size: .75rem;
+        padding: .5rem .5rem;
+        box-sizing: border-box;
+    }
+}
